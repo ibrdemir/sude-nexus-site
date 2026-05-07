@@ -38,14 +38,14 @@ export default function Home() {
         backdropFilter: 'blur(12px)', zIndex: 100
       }}>
         <div style={{ display: 'flex', alignItems: 'baseline', fontSize: '1.4rem', letterSpacing: '0.08em' }}>
-          <span style={{ fontWeight: 300, color: '#888780' }}>sude</span>
+          <span style={{ fontWeight: 300, color: 'rgba(255,255,255,0.5)' }}>sude</span>
           <span style={{ fontWeight: 700, color: '#1d9e75' }}>NEXUS</span>
         </div>
 
         <ul className="nav-links" style={{ display: 'flex', gap: '2.5rem', listStyle: 'none', margin: 0, padding: 0 }}>
           {[['Consulting', '#consulting'], ['Training', '#training'], ['Projects', '#projects'], ['Digital', '/digital'], ['About', '#about'], ['Contact', '#contact']].map(([label, href]) => (
             <li key={label}>
-              <a href={href} style={{ fontSize: '0.78rem', fontWeight: 400, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#888780', textDecoration: 'none' }}>{label}</a>
+              <a href={href} style={{ fontSize: '0.78rem', fontWeight: 400, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{label}</a>
             </li>
           ))}
         </ul>
@@ -148,7 +148,7 @@ export default function Home() {
         ].map(s => (
           <div key={s.num} style={{ borderLeft: '2px solid #1d9e75', paddingLeft: '1.25rem' }}>
             <div style={{ fontSize: '1.6rem', fontWeight: 700, color: '#1d9e75', lineHeight: 1, marginBottom: '0.3rem' }}>{s.num}</div>
-            <div style={{ fontSize: '0.75rem', color: '#888780', fontWeight: 300, letterSpacing: '0.06em', fontFamily: 'var(--font-raleway), Raleway, sans-serif' }}>{s.label}</div>
+            <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.55)', fontWeight: 300, letterSpacing: '0.06em', fontFamily: 'var(--font-raleway), Raleway, sans-serif' }}>{s.label}</div>
           </div>
         ))}
       </section>
@@ -206,7 +206,7 @@ export default function Home() {
             We don&apos;t just advise.<br />
             <span style={{ color: '#1d9e75' }}>We build.</span>
           </h2>
-          <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.95rem', color: '#888780', fontWeight: 300, lineHeight: 1.9, margin: 0 }}>
+          <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.95rem', color: 'rgba(255,255,255,0.6)', fontWeight: 300, lineHeight: 1.9, margin: 0 }}>
             sudeNEXUS takes an active role in projects, as applicant, coordinator, or partner, bringing expertise and commitment to every collaboration.
           </p>
         </div>
@@ -285,18 +285,18 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer style={{ background: '#2c2c2a', color: '#888780', padding: '2.5rem 4rem' }}>
+      <footer style={{ background: '#2c2c2a', color: 'white', padding: '2.5rem 4rem' }}>
         <div className="footer-inner" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'baseline', fontSize: '1.1rem', letterSpacing: '0.08em', marginBottom: '0.4rem' }}>
-              <span style={{ fontWeight: 300, color: '#888780' }}>sude</span>
+              <span style={{ fontWeight: 300, color: 'rgba(255,255,255,0.5)' }}>sude</span>
               <span style={{ fontWeight: 700, color: '#1d9e75' }}>NEXUS</span>
             </div>
             <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.72rem', fontWeight: 300, letterSpacing: '0.1em' }}>Connecting ideas. Creating impact.</p>
           </div>
           <div className="footer-links" style={{ display: 'flex', gap: '2rem' }}>
             {[['Consulting', '#consulting'], ['Training', '#training'], ['Projects', '#projects'], ['Digital', '/digital'], ['About', '#about'], ['Contact', '#contact']].map(([label, href]) => (
-              <a key={label} href={href} style={{ fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888780', textDecoration: 'none' }}>{label}</a>
+              <a key={label} href={href} style={{ fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{label}</a>
             ))}
           </div>
           <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.78rem', fontWeight: 300 }}>© 2025 sudeNEXUS. All rights reserved.</p>
