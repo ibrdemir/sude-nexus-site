@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Digital() {
   return (
     <main style={{ fontFamily: 'var(--font-montserrat), Montserrat, sans-serif', color: '#444441' }}>
@@ -5,35 +7,34 @@ export default function Digital() {
       {/* NAV */}
       <nav style={{
         display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-        padding: '1.25rem 4rem', borderBottom: '0.5px solid #e5e3df',
-        position: 'sticky', top: 0, background: 'rgba(255,255,255,0.97)',
-        backdropFilter: 'blur(8px)', zIndex: 100
+        padding: '0.75rem 4rem', borderBottom: '0.5px solid rgba(229,227,223,0.6)',
+        position: 'sticky', top: 0, background: 'rgba(255,255,255,0.75)',
+        backdropFilter: 'blur(12px)', zIndex: 100
       }}>
-        <section style={{ padding: '8rem 4rem 7rem', paddingTop: '10rem', background: 'white' }}></section>
-        <a href="/" style={{ display: 'flex', alignItems: 'baseline', fontSize: '1.4rem', letterSpacing: '0.08em', textDecoration: 'none' }}>
+        <Link href="/" style={{ display: 'flex', alignItems: 'baseline', fontSize: '1.4rem', letterSpacing: '0.08em', textDecoration: 'none' }}>
           <span style={{ fontWeight: 300, color: '#888780' }}>sude</span>
           <span style={{ fontWeight: 700, color: '#1d9e75' }}>NEXUS</span>
-        </a>
+        </Link>
         <ul style={{ display: 'flex', gap: '2.5rem', listStyle: 'none', margin: 0, padding: 0 }}>
           {[['Consulting', '/#consulting'], ['Training', '/#training'], ['Projects', '/#projects'], ['Digital', '/digital'], ['About', '/#about'], ['Contact', '/#contact']].map(([label, href]) => (
             <li key={label}>
-              <a href={href} style={{
-                fontSize: '0.78rem', fontWeight: label === 'Digital' ? 600 : 400,
+              <Link href={href} style={{
+                fontSize: '0.78rem', fontWeight: 400,
                 letterSpacing: '0.12em', textTransform: 'uppercase',
-                color: label === 'Digital' ? '#1d9e75' : '#888780', textDecoration: 'none'
-              }}>{label}</a>
+                color: '#888780', textDecoration: 'none'
+              }}>{label}</Link>
             </li>
           ))}
         </ul>
-        <a href="/#contact" style={{
+        <Link href="/#contact" style={{
           fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.1em',
           textTransform: 'uppercase', color: '#1d9e75', border: '1.5px solid #1d9e75',
           padding: '0.6rem 1.5rem', textDecoration: 'none', borderRadius: '2px'
-        }}>Get in Touch</a>
+        }}>Get in Touch</Link>
       </nav>
 
       {/* HERO */}
-      <section style={{ padding: '8rem 4rem 7rem', background: 'white', maxWidth: '100%' }}>
+      <section style={{ padding: '8rem 4rem 7rem', background: 'white' }}>
         <p style={{ fontSize: '0.72rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#1d9e75', fontWeight: 600, marginBottom: '2rem' }}>
           Digital Transformation
         </p>
@@ -47,17 +48,17 @@ export default function Digital() {
           We help organisations and educational institutions navigate digital transformation — from strategy and tool selection to implementation and training.
         </p>
         <div style={{ display: 'flex', gap: '1rem' }}>
-          <a href="/#contact" style={{
+          <Link href="/#contact" style={{
             background: '#1d9e75', color: 'white', padding: '0.85rem 2.25rem',
             fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.12em',
             textTransform: 'uppercase', textDecoration: 'none', borderRadius: '2px'
-          }}>Start a Conversation</a>
-          <a href="/#training" style={{
+          }}>Start a Conversation</Link>
+          <Link href="/#training" style={{
             background: 'transparent', color: '#444441', padding: '0.85rem 2.25rem',
             fontSize: '0.78rem', fontWeight: 400, letterSpacing: '0.12em',
             textTransform: 'uppercase', textDecoration: 'none', borderRadius: '2px',
             border: '1px solid #d3d1c7'
-          }}>View Training</a>
+          }}>View Training</Link>
         </div>
       </section>
 
@@ -74,7 +75,7 @@ export default function Digital() {
             { icon: '⬡', title: 'Process Automation', desc: 'Identifying manual workflows that can be streamlined or automated to save time and reduce errors.' },
             { icon: '◇', title: 'Digital Literacy Training', desc: 'Practical training programmes that build digital confidence and capability across your team or institution.' },
             { icon: '▣', title: 'School Management Systems', desc: 'Tailored digital infrastructure for educational institutions — administration, communication, and data in one place.' },
-            { icon: '◐', title: 'Change Management', desc: 'Supporting organisations through digital transitions with structured communication, training, and adoption strategies.' },
+            { icon: '◐', title: 'AI Integration & Workflow Modernisation', desc: 'Helping organisations build genuine AI fluency and redesign workflows to make technology work for people.' },
           ].map(card => (
             <div key={card.title} style={{ background: 'white', border: '0.5px solid #e5e3df', padding: '1.75rem', borderRadius: '4px' }}>
               <div style={{ fontSize: '1.4rem', color: '#1d9e75', marginBottom: '0.75rem' }}>{card.icon}</div>
@@ -141,15 +142,15 @@ export default function Digital() {
       {/* FOOTER */}
       <footer style={{ background: '#2c2c2a', color: '#888780', padding: '2.5rem 4rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
         <div>
-          <a href="/" style={{ display: 'flex', alignItems: 'baseline', fontSize: '1.1rem', letterSpacing: '0.08em', marginBottom: '0.4rem', textDecoration: 'none' }}>
+          <Link href="/" style={{ display: 'flex', alignItems: 'baseline', fontSize: '1.1rem', letterSpacing: '0.08em', marginBottom: '0.4rem', textDecoration: 'none' }}>
             <span style={{ fontWeight: 300, color: '#888780' }}>sude</span>
             <span style={{ fontWeight: 700, color: '#1d9e75' }}>NEXUS</span>
-          </a>
+          </Link>
           <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.72rem', fontWeight: 300, letterSpacing: '0.1em' }}>Connecting ideas. Creating impact.</p>
         </div>
         <div style={{ display: 'flex', gap: '2rem' }}>
           {[['Consulting', '/#consulting'], ['Training', '/#training'], ['Projects', '/#projects'], ['Digital', '/digital'], ['Contact', '/#contact']].map(([label, href]) => (
-            <a key={label} href={href} style={{ fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888780', textDecoration: 'none' }}>{label}</a>
+            <Link key={label} href={href} style={{ fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888780', textDecoration: 'none' }}>{label}</Link>
           ))}
         </div>
         <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.78rem', fontWeight: 300 }}>© 2025 sudeNEXUS. All rights reserved.</p>
