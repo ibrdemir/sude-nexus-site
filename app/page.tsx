@@ -37,10 +37,7 @@ export default function Home() {
         background: 'rgba(255,255,255,0.92)',
         backdropFilter: 'blur(12px)', zIndex: 100
       }}>
-        <div style={{ display: 'flex', alignItems: 'baseline', fontSize: '1.4rem', letterSpacing: '0.08em' }}>
-          <span style={{ fontWeight: 300, color: 'rgba(255,255,255,0.5)' }}>sude</span>
-          <span style={{ fontWeight: 700, color: '#1d9e75' }}>NEXUS</span>
-        </div>
+        <img src="/logo.svg" alt="sudeNEXUS" style={{ height: '28px', width: 'auto' }} />
 
         <ul className="nav-links" style={{ display: 'flex', gap: '2.5rem', listStyle: 'none', margin: 0, padding: 0 }}>
           {[['Consulting', '#consulting'], ['Training', '#training'], ['Projects', '#projects'], ['Digital', '/digital'], ['About', '#about'], ['Contact', '#contact']].map(([label, href]) => (
@@ -288,10 +285,7 @@ export default function Home() {
       <footer style={{ background: '#2c2c2a', color: 'white', padding: '2.5rem 4rem' }}>
         <div className="footer-inner" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
           <div>
-            <div style={{ display: 'flex', alignItems: 'baseline', fontSize: '1.1rem', letterSpacing: '0.08em', marginBottom: '0.4rem' }}>
-              <span style={{ fontWeight: 300, color: 'rgba(255,255,255,0.5)' }}>sude</span>
-              <span style={{ fontWeight: 700, color: '#1d9e75' }}>NEXUS</span>
-            </div>
+            <img src="/logo.svg" alt="sudeNEXUS" style={{ height: '28px', width: 'auto' }} />
             <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.72rem', fontWeight: 300, letterSpacing: '0.1em' }}>Connecting ideas. Creating impact.</p>
           </div>
           <div className="footer-links" style={{ display: 'flex', gap: '2rem' }}>
