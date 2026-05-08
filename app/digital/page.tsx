@@ -27,34 +27,35 @@ export default function Digital() {
       {/* NAV */}
       <nav className="nav-pad" style={{
         display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-        padding: '0.75rem 4rem', borderBottom: '0.5px solid rgba(229,227,223,0.6)',
-        position: 'sticky', top: 0, background: 'rgba(255,255,255,0.92)',
+        padding: '0.75rem 4rem', borderBottom: '0.5px solid rgba(36,54,84,0.12)',
+        position: 'sticky', top: 0, background: 'rgba(255,255,255,0.96)',
         backdropFilter: 'blur(12px)', zIndex: 100
       }}>
-        <img src="/logo.svg" alt="sudeNEXUS" style={{ height: '28px', width: 'auto' }} />
+        <Link href="/" style={{ display: 'block' }}>
+          <img src="/logo.svg" alt="sudeNEXUS" style={{ height: '34px', width: 'auto', display: 'block' }} />
+        </Link>
 
         <ul className="nav-links" style={{ display: 'flex', gap: '2.5rem', listStyle: 'none', margin: 0, padding: 0 }}>
-          {[['Consulting', '/#consulting'], ['Training', '/#training'], ['Projects', '/#projects'], ['Digital', '/digital'], ['About', '/#about'], ['Contact', '/#contact']].map(([label, href]) => (
+          {[['Consulting', '/#consulting'], ['Training', '/#training'], ['Projects', '/#projects'], ['DX by NEXUS', '/digital'], ['About', '/#about'], ['Contact', '/#contact']].map(([label, href]) => (
             <li key={label}>
-              <Link href={href} style={{ fontSize: '0.78rem', fontWeight: 400, letterSpacing: '0.12em', textTransform: 'uppercase', color: label === 'Digital' ? '#1d9e75' : '#888780', textDecoration: 'none' }}>{label}</Link>
+              <Link href={href} style={{ fontSize: '0.78rem', fontWeight: label === 'DX by NEXUS' ? 600 : 400, letterSpacing: '0.12em', textTransform: 'uppercase', color: label === 'DX by NEXUS' ? '#5c1a2e' : '#243654', textDecoration: 'none' }}>{label}</Link>
             </li>
           ))}
         </ul>
 
         <Link href="/#contact" className="nav-cta" style={{
           fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.1em',
-          textTransform: 'uppercase', color: '#1d9e75', border: '1.5px solid #1d9e75',
+          textTransform: 'uppercase', color: '#243654', border: '1.5px solid #243654',
           padding: '0.6rem 1.5rem', textDecoration: 'none', borderRadius: '2px'
         }}>Get in Touch</Link>
 
-        {/* Hamburger */}
         <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} style={{
           display: 'none', flexDirection: 'column', gap: '5px', background: 'none',
           border: 'none', cursor: 'pointer', padding: '4px'
         }}>
-          <span style={{ width: '24px', height: '2px', background: menuOpen ? '#1d9e75' : '#444441', display: 'block', transition: 'all 0.2s', transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none' }} />
-          <span style={{ width: '24px', height: '2px', background: '#444441', display: menuOpen ? 'none' : 'block' }} />
-          <span style={{ width: '24px', height: '2px', background: menuOpen ? '#1d9e75' : '#444441', display: 'block', transition: 'all 0.2s', transform: menuOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none' }} />
+          <span style={{ width: '24px', height: '2px', background: menuOpen ? '#1d9e75' : '#243654', display: 'block', transition: 'all 0.2s', transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none' }} />
+          <span style={{ width: '24px', height: '2px', background: '#243654', display: menuOpen ? 'none' : 'block' }} />
+          <span style={{ width: '24px', height: '2px', background: menuOpen ? '#1d9e75' : '#243654', display: 'block', transition: 'all 0.2s', transform: menuOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none' }} />
         </button>
       </nav>
 
@@ -66,15 +67,15 @@ export default function Digital() {
         borderBottom: '1px solid #e5e3df', gap: '1.25rem',
         boxShadow: '0 4px 20px rgba(0,0,0,0.08)'
       }}>
-        {[['Consulting', '/#consulting'], ['Training', '/#training'], ['Projects', '/#projects'], ['Digital', '/digital'], ['About', '/#about'], ['Contact', '/#contact']].map(([label, href]) => (
+        {[['Consulting', '/#consulting'], ['Training', '/#training'], ['Projects', '/#projects'], ['DX by NEXUS', '/digital'], ['About', '/#about'], ['Contact', '/#contact']].map(([label, href]) => (
           <Link key={label} href={href} onClick={() => setMenuOpen(false)} style={{
             fontSize: '0.9rem', fontWeight: 500, letterSpacing: '0.1em',
-            textTransform: 'uppercase', color: label === 'Digital' ? '#1d9e75' : '#444441',
+            textTransform: 'uppercase', color: label === 'DX by NEXUS' ? '#5c1a2e' : '#243654',
             textDecoration: 'none', paddingBottom: '1rem', borderBottom: '0.5px solid #e5e3df'
           }}>{label}</Link>
         ))}
         <Link href="/#contact" onClick={() => setMenuOpen(false)} style={{
-          background: '#1d9e75', color: 'white', padding: '0.85rem',
+          background: '#243654', color: 'white', padding: '0.85rem',
           fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.12em',
           textTransform: 'uppercase', textDecoration: 'none', borderRadius: '2px',
           textAlign: 'center', display: 'block'
@@ -83,13 +84,13 @@ export default function Digital() {
 
       {/* HERO */}
       <section className="hero-pad" style={{ padding: '8rem 4rem 7rem', background: 'white' }}>
-        <p style={{ fontSize: '0.72rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#1d9e75', fontWeight: 600, marginBottom: '2rem' }}>
-          Digital Transformation
+        <p style={{ fontSize: '0.72rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#5c1a2e', fontWeight: 600, marginBottom: '2rem' }}>
+          DX by NEXUS
         </p>
-        <h1 className="hero-h1" style={{ fontSize: '4rem', fontWeight: 700, lineHeight: 1.1, color: '#2c2c2a', marginBottom: '0.5rem', letterSpacing: '-0.02em', maxWidth: '700px' }}>
+        <h1 className="hero-h1" style={{ fontSize: '4rem', fontWeight: 700, lineHeight: 1.1, color: '#243654', marginBottom: '0.5rem', letterSpacing: '-0.02em', maxWidth: '700px' }}>
           Technology that
         </h1>
-        <h1 className="hero-h1" style={{ fontSize: '4rem', fontWeight: 300, lineHeight: 1.1, color: '#2c2c2a', marginBottom: '2rem', letterSpacing: '-0.02em' }}>
+        <h1 className="hero-h1" style={{ fontSize: '4rem', fontWeight: 300, lineHeight: 1.1, color: '#243654', marginBottom: '2rem', letterSpacing: '-0.02em' }}>
           drives real <span style={{ color: '#1d9e75', fontWeight: 700 }}>change.</span>
         </h1>
         <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '1.1rem', fontWeight: 300, color: '#888780', lineHeight: 1.8, maxWidth: '520px', marginBottom: '3rem' }}>
@@ -102,18 +103,18 @@ export default function Digital() {
             textTransform: 'uppercase', textDecoration: 'none', borderRadius: '2px'
           }}>Start a Conversation</Link>
           <Link href="/#training" style={{
-            background: 'transparent', color: '#444441', padding: '0.85rem 2.25rem',
+            background: 'transparent', color: '#243654', padding: '0.85rem 2.25rem',
             fontSize: '0.78rem', fontWeight: 400, letterSpacing: '0.12em',
             textTransform: 'uppercase', textDecoration: 'none', borderRadius: '2px',
-            border: '1px solid #d3d1c7'
+            border: '1px solid #243654'
           }}>View Training</Link>
         </div>
       </section>
 
       {/* SERVICES */}
-      <section className="section-pad" style={{ padding: '6rem 4rem', background: '#f1efe8' }}>
-        <p style={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#1d9e75', fontWeight: 600, marginBottom: '0.75rem' }}>What We Offer</p>
-        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: '#2c2c2a', lineHeight: 1.2, marginBottom: '3rem' }}>
+      <section className="section-pad" style={{ padding: '6rem 4rem', background: '#f9f4f6' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#5c1a2e', fontWeight: 600, marginBottom: '0.75rem' }}>What We Offer</p>
+        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: '#243654', lineHeight: 1.2, marginBottom: '3rem' }}>
           End-to-end digital solutions.
         </h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.25rem' }}>
@@ -127,19 +128,19 @@ export default function Digital() {
           ].map(s => (
             <div key={s.title} style={{ background: 'white', border: '0.5px solid #e5e3df', padding: '2rem', borderRadius: '4px' }}>
               <div style={{ fontSize: '1.4rem', color: '#1d9e75', marginBottom: '1rem' }}>{s.icon}</div>
-              <h3 style={{ fontSize: '1rem', fontWeight: 600, color: '#2c2c2a', marginBottom: '0.75rem' }}>{s.title}</h3>
+              <h3 style={{ fontSize: '1rem', fontWeight: 600, color: '#243654', marginBottom: '0.75rem' }}>{s.title}</h3>
               <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.88rem', color: '#888780', lineHeight: 1.7, fontWeight: 300 }}>{s.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* WHY DIGITAL */}
+      {/* APPROACH */}
       <section className="section-pad" style={{ padding: '6rem 4rem', background: 'white' }}>
         <div className="two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6rem', alignItems: 'center' }}>
           <div>
-            <p style={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#1d9e75', fontWeight: 600, marginBottom: '1rem' }}>Our Approach</p>
-            <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: '#2c2c2a', lineHeight: 1.2, marginBottom: '1.5rem' }}>
+            <p style={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#5c1a2e', fontWeight: 600, marginBottom: '1rem' }}>Our Approach</p>
+            <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: '#243654', lineHeight: 1.2, marginBottom: '1.5rem' }}>
               Digital transformation done right.
             </h2>
             <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.95rem', color: '#888780', fontWeight: 300, lineHeight: 1.9, marginBottom: '1.25rem' }}>
@@ -156,7 +157,7 @@ export default function Digital() {
               { num: 'Scalable', label: 'Solutions that grow with you' },
               { num: 'Supported', label: 'Training and handover included' },
             ].map(stat => (
-              <div key={stat.num} style={{ background: '#f1efe8', padding: '1.75rem', borderRadius: '4px', borderLeft: '3px solid #1d9e75' }}>
+              <div key={stat.num} style={{ background: '#f9f4f6', padding: '1.75rem', borderRadius: '4px', borderLeft: '3px solid #1d9e75' }}>
                 <div style={{ fontSize: '1.1rem', fontWeight: 700, color: '#1d9e75', lineHeight: 1.2, marginBottom: '0.4rem' }}>{stat.num}</div>
                 <div style={{ fontSize: '0.78rem', color: '#888780', fontWeight: 300, letterSpacing: '0.06em', fontFamily: 'var(--font-raleway), Raleway, sans-serif' }}>{stat.label}</div>
               </div>
@@ -166,12 +167,12 @@ export default function Digital() {
       </section>
 
       {/* CTA */}
-      <section className="section-pad" style={{ padding: '6rem 4rem', background: '#2c2c2a', textAlign: 'center' }}>
+      <section className="section-pad" style={{ padding: '6rem 4rem', background: '#243654', textAlign: 'center' }}>
         <p style={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#1d9e75', fontWeight: 600, marginBottom: '1rem' }}>Get Started</p>
-        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: 'white', lineHeight: 1.2, marginBottom: '1.5rem', maxWidth: '600px', margin: '0 auto 1.5rem' }}>
+        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: 'white', lineHeight: 1.2, maxWidth: '600px', margin: '0 auto 1.5rem' }}>
           Ready to transform how your organisation works?
         </h2>
-        <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.95rem', color: '#888780', fontWeight: 300, lineHeight: 1.9, maxWidth: '500px', margin: '0 auto 2.5rem' }}>
+        <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.95rem', color: 'rgba(255,255,255,0.65)', fontWeight: 300, lineHeight: 1.9, maxWidth: '500px', margin: '0 auto 2.5rem' }}>
           Let's start with a conversation about where you are and where you want to be.
         </p>
         <Link href="/#contact" style={{
@@ -183,18 +184,17 @@ export default function Digital() {
       </section>
 
       {/* FOOTER */}
-      <footer style={{ background: '#2c2c2a', borderTop: '0.5px solid rgba(255,255,255,0.08)', color: '#888780', padding: '2.5rem 4rem' }}>
+      <footer style={{ background: '#243654', borderTop: '0.5px solid rgba(255,255,255,0.08)', color: 'white', padding: '2.5rem 4rem' }}>
         <div className="footer-inner" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
-          <div>
-            <img src="/logo.svg" alt="sudeNEXUS" style={{ height: '28px', width: 'auto' }} />
-            <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.72rem', fontWeight: 300, letterSpacing: '0.1em' }}>Connecting ideas. Creating impact.</p>
-          </div>
+          <Link href="/" style={{ display: 'block' }}>
+            <img src="/logo.svg" alt="sudeNEXUS" style={{ height: '28px', width: 'auto', display: 'block', filter: 'brightness(0) invert(1)' }} />
+          </Link>
           <div className="footer-links" style={{ display: 'flex', gap: '2rem' }}>
-            {[['Consulting', '/#consulting'], ['Training', '/#training'], ['Projects', '/#projects'], ['Digital', '/digital'], ['About', '/#about'], ['Contact', '/#contact']].map(([label, href]) => (
-              <Link key={label} href={href} style={{ fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888780', textDecoration: 'none' }}>{label}</Link>
+            {[['Consulting', '/#consulting'], ['Training', '/#training'], ['Projects', '/#projects'], ['DX by NEXUS', '/digital'], ['About', '/#about'], ['Contact', '/#contact']].map(([label, href]) => (
+              <Link key={label} href={href} style={{ fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>{label}</Link>
             ))}
           </div>
-          <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.78rem', fontWeight: 300 }}>© 2025 sudeNEXUS. All rights reserved.</p>
+          <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.78rem', fontWeight: 300, color: 'rgba(255,255,255,0.5)' }}>© 2025 sudeNEXUS. All rights reserved.</p>
         </div>
       </footer>
 

@@ -32,35 +32,36 @@ export default function Home() {
       {/* NAV */}
       <nav className="nav-pad" style={{
         display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-        padding: '0.75rem 4rem', borderBottom: '0.5px solid rgba(229,227,223,0.6)',
+        padding: '0.75rem 4rem', borderBottom: '0.5px solid rgba(36,54,84,0.12)',
         position: 'fixed', top: 0, left: 0, right: 0,
-        background: 'rgba(255,255,255,0.92)',
+        background: 'rgba(255,255,255,0.96)',
         backdropFilter: 'blur(12px)', zIndex: 100
       }}>
-        <img src="/logo.svg" alt="sudeNEXUS" style={{ height: '28px', width: 'auto' }} />
+        <a href="/" style={{ display: 'block' }}>
+          <img src="/logo.svg" alt="sudeNEXUS" style={{ height: '34px', width: 'auto', display: 'block' }} />
+        </a>
 
         <ul className="nav-links" style={{ display: 'flex', gap: '2.5rem', listStyle: 'none', margin: 0, padding: 0 }}>
-          {[['Consulting', '#consulting'], ['Training', '#training'], ['Projects', '#projects'], ['Digital', '/digital'], ['About', '#about'], ['Contact', '#contact']].map(([label, href]) => (
+          {[['Consulting', '#consulting'], ['Training', '#training'], ['Projects', '#projects'], ['DX by NEXUS', '/digital'], ['About', '#about'], ['Contact', '#contact']].map(([label, href]) => (
             <li key={label}>
-              <a href={href} style={{ fontSize: '0.78rem', fontWeight: 400, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{label}</a>
+              <a href={href} style={{ fontSize: '0.78rem', fontWeight: 400, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#243654', textDecoration: 'none' }}>{label}</a>
             </li>
           ))}
         </ul>
 
         <a href="#contact" className="nav-cta" style={{
           fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.1em',
-          textTransform: 'uppercase', color: '#1d9e75', border: '1.5px solid #1d9e75',
+          textTransform: 'uppercase', color: '#243654', border: '1.5px solid #243654',
           padding: '0.6rem 1.5rem', textDecoration: 'none', borderRadius: '2px'
         }}>Get in Touch</a>
 
-        {/* Hamburger */}
         <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} style={{
           display: 'none', flexDirection: 'column', gap: '5px', background: 'none',
           border: 'none', cursor: 'pointer', padding: '4px'
         }}>
-          <span style={{ width: '24px', height: '2px', background: menuOpen ? '#1d9e75' : '#444441', display: 'block', transition: 'all 0.2s', transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none' }} />
-          <span style={{ width: '24px', height: '2px', background: '#444441', display: menuOpen ? 'none' : 'block' }} />
-          <span style={{ width: '24px', height: '2px', background: menuOpen ? '#1d9e75' : '#444441', display: 'block', transition: 'all 0.2s', transform: menuOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none' }} />
+          <span style={{ width: '24px', height: '2px', background: menuOpen ? '#1d9e75' : '#243654', display: 'block', transition: 'all 0.2s', transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none' }} />
+          <span style={{ width: '24px', height: '2px', background: '#243654', display: menuOpen ? 'none' : 'block' }} />
+          <span style={{ width: '24px', height: '2px', background: menuOpen ? '#1d9e75' : '#243654', display: 'block', transition: 'all 0.2s', transform: menuOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none' }} />
         </button>
       </nav>
 
@@ -72,15 +73,15 @@ export default function Home() {
         borderBottom: '1px solid #e5e3df', gap: '1.25rem',
         boxShadow: '0 4px 20px rgba(0,0,0,0.08)'
       }}>
-        {[['Consulting', '#consulting'], ['Training', '#training'], ['Projects', '#projects'], ['Digital', '/digital'], ['About', '#about'], ['Contact', '#contact']].map(([label, href]) => (
+        {[['Consulting', '#consulting'], ['Training', '#training'], ['Projects', '#projects'], ['DX by NEXUS', '/digital'], ['About', '#about'], ['Contact', '#contact']].map(([label, href]) => (
           <a key={label} href={href} onClick={() => setMenuOpen(false)} style={{
             fontSize: '0.9rem', fontWeight: 500, letterSpacing: '0.1em',
-            textTransform: 'uppercase', color: '#444441', textDecoration: 'none',
+            textTransform: 'uppercase', color: '#243654', textDecoration: 'none',
             paddingBottom: '1rem', borderBottom: '0.5px solid #e5e3df'
           }}>{label}</a>
         ))}
         <a href="#contact" onClick={() => setMenuOpen(false)} style={{
-          background: '#1d9e75', color: 'white', padding: '0.85rem',
+          background: '#243654', color: 'white', padding: '0.85rem',
           fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.12em',
           textTransform: 'uppercase', textDecoration: 'none', borderRadius: '2px',
           textAlign: 'center', display: 'block'
@@ -93,13 +94,13 @@ export default function Home() {
         display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center'
       }}>
         <div>
-          <p style={{ fontSize: '0.72rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#1d9e75', fontWeight: 600, marginBottom: '2rem' }}>
+          <p style={{ fontSize: '0.72rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#5c1a2e', fontWeight: 600, marginBottom: '2rem' }}>
             Consulting · Training · Projects
           </p>
-          <h1 className="hero-h1" style={{ fontSize: '4rem', fontWeight: 700, lineHeight: 1.1, color: '#2c2c2a', marginBottom: '0.5rem', letterSpacing: '-0.02em' }}>
+          <h1 className="hero-h1" style={{ fontSize: '4rem', fontWeight: 700, lineHeight: 1.1, color: '#243654', marginBottom: '0.5rem', letterSpacing: '-0.02em' }}>
             From strategy
           </h1>
-          <h1 className="hero-h1" style={{ fontSize: '4rem', fontWeight: 300, lineHeight: 1.1, color: '#2c2c2a', marginBottom: '2rem', letterSpacing: '-0.02em' }}>
+          <h1 className="hero-h1" style={{ fontSize: '4rem', fontWeight: 300, lineHeight: 1.1, color: '#243654', marginBottom: '2rem', letterSpacing: '-0.02em' }}>
             to <span style={{ color: '#1d9e75', fontWeight: 700 }}>implementation.</span>
           </h1>
           <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '1.1rem', fontWeight: 300, color: '#888780', lineHeight: 1.8, maxWidth: '520px', marginBottom: '3rem' }}>
@@ -112,10 +113,10 @@ export default function Home() {
               textTransform: 'uppercase', textDecoration: 'none', borderRadius: '2px'
             }}>Our Services</a>
             <a href="#contact" style={{
-              background: 'transparent', color: '#444441', padding: '0.85rem 2.25rem',
+              background: 'transparent', color: '#243654', padding: '0.85rem 2.25rem',
               fontSize: '0.78rem', fontWeight: 400, letterSpacing: '0.12em',
               textTransform: 'uppercase', textDecoration: 'none', borderRadius: '2px',
-              border: '1px solid #d3d1c7'
+              border: '1px solid #243654'
             }}>Start a Project</a>
           </div>
         </div>
@@ -134,7 +135,7 @@ export default function Home() {
 
       {/* STATS BAR */}
       <section className="stats-grid" style={{
-        background: '#2c2c2a', padding: '2.5rem 4rem',
+        background: '#5c1a2e', padding: '2.5rem 4rem',
         display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2rem'
       }}>
         {[
@@ -145,17 +146,17 @@ export default function Home() {
         ].map(s => (
           <div key={s.num} style={{ borderLeft: '2px solid #1d9e75', paddingLeft: '1.25rem' }}>
             <div style={{ fontSize: '1.6rem', fontWeight: 700, color: '#1d9e75', lineHeight: 1, marginBottom: '0.3rem' }}>{s.num}</div>
-            <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.55)', fontWeight: 300, letterSpacing: '0.06em', fontFamily: 'var(--font-raleway), Raleway, sans-serif' }}>{s.label}</div>
+            <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.65)', fontWeight: 300, letterSpacing: '0.06em', fontFamily: 'var(--font-raleway), Raleway, sans-serif' }}>{s.label}</div>
           </div>
         ))}
       </section>
 
       {/* CONSULTING */}
-      <section id="consulting" className="section-pad" style={{ padding: '6rem 4rem', background: '#f1efe8' }}>
+      <section id="consulting" className="section-pad" style={{ padding: '6rem 4rem', background: '#f9f4f6' }}>
         <div className="two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem', alignItems: 'end' }}>
           <div>
-            <p style={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#1d9e75', fontWeight: 600, marginBottom: '1rem' }}>Consulting</p>
-            <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: '#2c2c2a', lineHeight: 1.2, marginBottom: '1.5rem' }}>Strategic guidance that delivers.</h2>
+            <p style={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#5c1a2e', fontWeight: 600, marginBottom: '1rem' }}>Consulting</p>
+            <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: '#243654', lineHeight: 1.2, marginBottom: '1.5rem' }}>Strategic guidance that delivers.</h2>
             <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.95rem', color: '#888780', fontWeight: 300, lineHeight: 1.9, marginBottom: '2rem' }}>
               We work alongside organisations to navigate complex landscapes, identifying opportunities, building strategies, and turning vision into action.
             </p>
@@ -181,8 +182,8 @@ export default function Home() {
         <div className="two-col-rev" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '4rem', alignItems: 'end' }}>
           <TrainingCards />
           <div className="training-sticky" style={{ position: 'sticky', top: '6rem' }}>
-            <p style={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#1d9e75', fontWeight: 600, marginBottom: '1rem' }}>Training</p>
-            <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: '#2c2c2a', lineHeight: 1.2, marginBottom: '1.5rem' }}>Learning that moves organisations forward.</h2>
+            <p style={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#5c1a2e', fontWeight: 600, marginBottom: '1rem' }}>Training</p>
+            <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: '#243654', lineHeight: 1.2, marginBottom: '1.5rem' }}>Learning that moves organisations forward.</h2>
             <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.95rem', color: '#888780', fontWeight: 300, lineHeight: 1.9, marginBottom: '2rem' }}>
               Our training programmes combine practical content with international perspective, designed for professionals who need more than theory.
             </p>
@@ -196,14 +197,14 @@ export default function Home() {
       </section>
 
       {/* PROJECTS */}
-      <section id="projects" className="section-pad" style={{ padding: '6rem 4rem', background: '#2c2c2a' }}>
+      <section id="projects" className="section-pad" style={{ padding: '6rem 4rem', background: '#243654' }}>
         <p style={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#1d9e75', fontWeight: 600, marginBottom: '1rem' }}>Projects</p>
         <div className="two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'end', marginBottom: '3rem' }}>
           <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: 'white', lineHeight: 1.2, margin: 0 }}>
             We don&apos;t just advise.<br />
             <span style={{ color: '#1d9e75' }}>We build.</span>
           </h2>
-          <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.95rem', color: 'rgba(255,255,255,0.6)', fontWeight: 300, lineHeight: 1.9, margin: 0 }}>
+          <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.95rem', color: 'rgba(255,255,255,0.65)', fontWeight: 300, lineHeight: 1.9, margin: 0 }}>
             sudeNEXUS takes an active role in projects, as applicant, coordinator, or partner, bringing expertise and commitment to every collaboration.
           </p>
         </div>
@@ -214,8 +215,8 @@ export default function Home() {
       <section id="about" className="section-pad" style={{ padding: '6rem 4rem', background: 'white' }}>
         <div className="two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6rem', alignItems: 'center' }}>
           <div>
-            <p style={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#1d9e75', fontWeight: 600, marginBottom: '1rem' }}>About sudeNEXUS</p>
-            <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: '#2c2c2a', lineHeight: 1.2, marginBottom: '1.5rem' }}>Built for organisations that want to do more.</h2>
+            <p style={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#5c1a2e', fontWeight: 600, marginBottom: '1rem' }}>About sudeNEXUS</p>
+            <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: '#243654', lineHeight: 1.2, marginBottom: '1.5rem' }}>Built for organisations that want to do more.</h2>
             <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.95rem', color: '#888780', fontWeight: 300, lineHeight: 1.9, marginBottom: '1.25rem' }}>
               sudeNEXUS is a consultancy at the intersection of strategy, education, and project development. We work with institutions, NGOs, and forward-thinking organisations to unlock their potential.
             </p>
@@ -230,7 +231,7 @@ export default function Home() {
               { num: '360°', label: 'Project lifecycle support' },
               { num: 'Networked', label: 'Active partner network' },
             ].map(stat => (
-              <div key={stat.num} style={{ background: '#f1efe8', padding: '2rem', borderRadius: '4px', borderLeft: '3px solid #1d9e75' }}>
+              <div key={stat.num} style={{ background: '#f9f4f6', padding: '2rem', borderRadius: '4px', borderLeft: '3px solid #1d9e75' }}>
                 <div style={{ fontSize: '2rem', fontWeight: 700, color: '#1d9e75', lineHeight: 1, marginBottom: '0.4rem' }}>{stat.num}</div>
                 <div style={{ fontSize: '0.78rem', color: '#888780', fontWeight: 300, letterSpacing: '0.06em', fontFamily: 'var(--font-raleway), Raleway, sans-serif' }}>{stat.label}</div>
               </div>
@@ -240,11 +241,11 @@ export default function Home() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="section-pad" style={{ padding: '6rem 4rem', background: '#f1efe8' }}>
+      <section id="contact" className="section-pad" style={{ padding: '6rem 4rem', background: '#f9f4f6' }}>
         <div className="two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6rem' }}>
           <div>
-            <p style={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#1d9e75', fontWeight: 600, marginBottom: '1rem' }}>Contact</p>
-            <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: '#2c2c2a', lineHeight: 1.2, marginBottom: '1.5rem' }}>Let&apos;s build something that matters.</h2>
+            <p style={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#5c1a2e', fontWeight: 600, marginBottom: '1rem' }}>Contact</p>
+            <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: '#243654', lineHeight: 1.2, marginBottom: '1.5rem' }}>Let&apos;s build something that matters.</h2>
             <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.95rem', color: '#888780', fontWeight: 300, lineHeight: 1.9, marginBottom: '2rem' }}>
               Whether you have a project in mind, are looking for a training partner, or simply want to explore what&apos;s possible, we&apos;d love to hear from you.
             </p>
@@ -274,7 +275,7 @@ export default function Home() {
               <label style={{ display: 'block', fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#888780', fontWeight: 600, marginBottom: '0.4rem' }}>Message</label>
               <textarea name="message" placeholder="Tell us about your project or enquiry..." rows={4} required style={{ width: '100%', padding: '0.7rem 0.9rem', border: '0.5px solid #d3d1c7', borderRadius: '2px', fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.88rem', color: '#444441', background: 'white', outline: 'none', resize: 'vertical', boxSizing: 'border-box' }} />
             </div>
-            <button type="submit" style={{ background: '#1d9e75', color: 'white', padding: '0.85rem 2rem', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', border: 'none', borderRadius: '2px', cursor: 'pointer' }}>
+            <button type="submit" style={{ background: '#243654', color: 'white', padding: '0.85rem 2rem', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', border: 'none', borderRadius: '2px', cursor: 'pointer' }}>
               Send Message
             </button>
           </form>
@@ -282,18 +283,17 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer style={{ background: '#2c2c2a', color: 'white', padding: '2.5rem 4rem' }}>
+      <footer style={{ background: '#243654', color: 'white', padding: '2.5rem 4rem' }}>
         <div className="footer-inner" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
-          <div>
-            <img src="/logo.svg" alt="sudeNEXUS" style={{ height: '28px', width: 'auto' }} />
-            <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.72rem', fontWeight: 300, letterSpacing: '0.1em' }}>Connecting ideas. Creating impact.</p>
-          </div>
+          <a href="/" style={{ display: 'block' }}>
+            <img src="/logo.svg" alt="sudeNEXUS" style={{ height: '28px', width: 'auto', display: 'block', filter: 'brightness(0) invert(1)' }} />
+          </a>
           <div className="footer-links" style={{ display: 'flex', gap: '2rem' }}>
-            {[['Consulting', '#consulting'], ['Training', '#training'], ['Projects', '#projects'], ['Digital', '/digital'], ['About', '#about'], ['Contact', '#contact']].map(([label, href]) => (
-              <a key={label} href={href} style={{ fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{label}</a>
+            {[['Consulting', '#consulting'], ['Training', '#training'], ['Projects', '#projects'], ['DX by NEXUS', '/digital'], ['About', '#about'], ['Contact', '#contact']].map(([label, href]) => (
+              <a key={label} href={href} style={{ fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>{label}</a>
             ))}
           </div>
-          <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.78rem', fontWeight: 300 }}>© 2025 sudeNEXUS. All rights reserved.</p>
+          <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.78rem', fontWeight: 300, color: 'rgba(255,255,255,0.5)' }}>© 2025 sudeNEXUS. All rights reserved.</p>
         </div>
       </footer>
 
