@@ -179,7 +179,7 @@ export default function Home() {
         </div>
         <div className="approach-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '1.5rem' }}>
           {[
-            { num: '01', title: 'Vision First', desc: 'We listen before we advise. No assumptions, no templates — just your story, in your words.' },
+            { num: '01', title: 'The NEXUS Intake', desc: 'We start by listening — fully, without direction. No assumptions, no templates. Just your vision, in your words, before we offer any guidance.' },
             { num: '02', title: 'Assess', desc: 'We evaluate your capacity, eligibility, and existing partnerships to map what\'s genuinely possible.' },
             { num: '03', title: 'Connect', desc: 'Where gaps exist, we draw on our 26+ country network to build the right consortium for your project.' },
             { num: '04', title: 'Build & Submit', desc: 'We manage the full application process with complete transparency. Nothing moves without your understanding.' },
