@@ -123,7 +123,7 @@ export default function Digital() {
             { icon: '◎', title: 'EdTech Solutions', desc: 'Technology platforms and tools that transform how schools and institutions teach, manage, and communicate.' },
             { icon: '⬡', title: 'Process Automation', desc: 'Identifying manual workflows that can be streamlined or automated to save time and reduce errors.' },
             { icon: '◇', title: 'Digital Literacy Training', desc: 'Practical training programmes that build digital confidence and capability across your team or institution.' },
-            { icon: '▣', title: 'School Management Systems', desc: 'Tailored digital infrastructure for educational institutions — administration, communication, and data in one place.' },
+            { icon: '▣', title: 'Management Systems by DX', desc: 'Tailored digital infrastructure for schools, NGOs, and organisations — designed and delivered by DX by NEXUS.' },
             { icon: '◉', title: 'AI Integration & Workflow Modernisation', desc: 'Practical AI adoption strategies that enhance productivity without overwhelming your team.' },
           ].map(s => (
             <div key={s.title} style={{ background: 'white', border: '0.5px solid #e5e3df', padding: '2rem', borderRadius: '4px' }}>
