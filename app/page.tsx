@@ -17,7 +17,9 @@ export default function Home() {
           .hero-grid { grid-template-columns: 1fr !important; padding: 7rem 1.5rem 4rem !important; }
           .hero-svg { display: none !important; }
           .hero-h1 { font-size: 2.8rem !important; }
+          .hero-h1-sm { font-size: 2.8rem !important; }
           .stats-grid { grid-template-columns: 1fr 1fr !important; padding: 2rem 1.5rem !important; gap: 1.5rem !important; }
+          .approach-grid { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
           .section-pad { padding: 4rem 1.5rem !important; }
           .two-col { grid-template-columns: 1fr !important; gap: 2rem !important; }
           .two-col-rev { grid-template-columns: 1fr !important; gap: 2rem !important; }
@@ -26,6 +28,7 @@ export default function Home() {
           .footer-links { flex-wrap: wrap !important; gap: 1rem !important; }
           .nav-pad { padding: 0.75rem 1.5rem !important; }
           .training-sticky { position: static !important; }
+          .programmes-band { flex-wrap: wrap !important; gap: 0.5rem !important; padding: 1.25rem 1.5rem !important; }
         }
       `}</style>
 
@@ -95,16 +98,16 @@ export default function Home() {
       }}>
         <div>
           <p style={{ fontSize: '0.72rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#5c1a2e', fontWeight: 600, marginBottom: '2rem' }}>
-            Consulting · Training · Projects
+            Erasmus+ · Horizon Europe · CERV · Creative Europe · and more
           </p>
           <h1 className="hero-h1" style={{ fontSize: '4rem', fontWeight: 700, lineHeight: 1.1, color: '#243654', marginBottom: '0.5rem', letterSpacing: '-0.02em' }}>
             From strategy
           </h1>
-          <h1 className="hero-h1" style={{ fontSize: '4rem', fontWeight: 300, lineHeight: 1.1, color: '#243654', marginBottom: '2rem', letterSpacing: '-0.02em' }}>
+          <h1 className="hero-h1-sm" style={{ fontSize: '4rem', fontWeight: 300, lineHeight: 1.1, color: '#243654', marginBottom: '2rem', letterSpacing: '-0.02em' }}>
             to <span style={{ color: '#1d9e75', fontWeight: 700 }}>implementation.</span>
           </h1>
           <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '1.1rem', fontWeight: 300, color: '#888780', lineHeight: 1.8, maxWidth: '520px', marginBottom: '3rem' }}>
-            sudeNEXUS partners with organisations to design, fund, and deliver high-impact projects — from concept to completion.
+            sudeNEXUS partners with organisations to design, fund, and deliver high-impact projects — from concept to completion. Active across 26+ countries from Europe to Central Asia.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="#consulting" style={{
@@ -139,16 +142,56 @@ export default function Home() {
         display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2rem'
       }}>
         {[
-          { num: '360°', label: 'End-to-end project support' },
-          { num: 'Global', label: 'Cross-border programme expertise' },
+          { num: '28+', label: 'EU & international projects' },
+          { num: '26+', label: 'Countries from Europe to Central Asia' },
           { num: 'Accredited', label: 'Internationally recognised courses' },
-          { num: 'Networked', label: 'Active multi-country partnerships' },
+          { num: 'Erasmus+ · Horizon', label: 'And 8 more EU programmes' },
         ].map(s => (
           <div key={s.num} style={{ borderLeft: '2px solid #1d9e75', paddingLeft: '1.25rem' }}>
-            <div style={{ fontSize: '1.6rem', fontWeight: 700, color: '#1d9e75', lineHeight: 1, marginBottom: '0.3rem' }}>{s.num}</div>
+            <div style={{ fontSize: '1.4rem', fontWeight: 700, color: '#1d9e75', lineHeight: 1, marginBottom: '0.3rem' }}>{s.num}</div>
             <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.65)', fontWeight: 300, letterSpacing: '0.06em', fontFamily: 'var(--font-raleway), Raleway, sans-serif' }}>{s.label}</div>
           </div>
         ))}
+      </section>
+
+      {/* PROGRAMMES BAND */}
+      <section className="programmes-band" style={{
+        background: '#243654', padding: '1.25rem 4rem',
+        display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap'
+      }}>
+        <span style={{ fontSize: '0.68rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', fontWeight: 600, marginRight: '0.5rem' }}>Programmes</span>
+        {['Erasmus+', 'Horizon Europe', 'CERV', 'Creative Europe', 'Digital Europe', 'LIFE', 'European Solidarity Corps', 'EU External Action (RELEX)', 'PPPA', 'Country Specific Calls'].map((p, i, arr) => (
+          <React.Fragment key={p}>
+            <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.7)', fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontWeight: 300 }}>{p}</span>
+            {i < arr.length - 1 && <span style={{ color: 'rgba(255,255,255,0.2)', fontSize: '0.7rem' }}>·</span>}
+          </React.Fragment>
+        ))}
+      </section>
+
+      {/* THE NEXUS APPROACH */}
+      <section className="section-pad" style={{ padding: '6rem 4rem', background: 'white' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#5c1a2e', fontWeight: 600, marginBottom: '0.75rem' }}>Methodology</p>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '3.5rem', flexWrap: 'wrap', gap: '1rem' }}>
+          <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: '#243654', lineHeight: 1.2, margin: 0 }}>The NEXUS Approach</h2>
+          <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.95rem', color: '#888780', fontWeight: 300, maxWidth: '420px', margin: 0, lineHeight: 1.8 }}>
+            A process built around your vision, not our templates.
+          </p>
+        </div>
+        <div className="approach-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '1.5rem' }}>
+          {[
+            { num: '01', title: 'Vision First', desc: 'We listen before we advise. No assumptions, no templates — just your story, in your words.' },
+            { num: '02', title: 'Assess', desc: 'We evaluate your capacity, eligibility, and existing partnerships to map what\'s genuinely possible.' },
+            { num: '03', title: 'Connect', desc: 'Where gaps exist, we draw on our 26+ country network to build the right consortium for your project.' },
+            { num: '04', title: 'Build & Submit', desc: 'We manage the full application process with complete transparency. Nothing moves without your understanding.' },
+            { num: '05', title: 'Deliver & Report', desc: 'From kick-off to final report, we stay alongside you — managing deliverables, reporting, and every milestone to closure.' },
+          ].map((step) => (
+            <div key={step.num} style={{ borderTop: '2px solid #1d9e75', paddingTop: '1.5rem' }}>
+              <div style={{ fontSize: '0.72rem', fontWeight: 700, color: '#1d9e75', letterSpacing: '0.15em', marginBottom: '0.75rem' }}>{step.num}</div>
+              <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#243654', marginBottom: '0.75rem' }}>{step.title}</h3>
+              <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.85rem', color: '#888780', lineHeight: 1.8, fontWeight: 300 }}>{step.desc}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* CONSULTING */}
@@ -187,7 +230,7 @@ export default function Home() {
             <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.95rem', color: '#888780', fontWeight: 300, lineHeight: 1.9, marginBottom: '2rem' }}>
               Our training programmes combine practical content with international perspective, designed for professionals who need more than theory.
             </p>
-            <a href="#contact" style={{
+            <a href="https://sudenexus.nl" target="_blank" rel="noopener noreferrer" style={{
               background: '#1d9e75', color: 'white', padding: '0.75rem 2rem',
               fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.12em',
               textTransform: 'uppercase', textDecoration: 'none', borderRadius: '2px', display: 'inline-block'
@@ -205,7 +248,7 @@ export default function Home() {
             <span style={{ color: '#1d9e75' }}>We build.</span>
           </h2>
           <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.95rem', color: 'rgba(255,255,255,0.65)', fontWeight: 300, lineHeight: 1.9, margin: 0 }}>
-            sudeNEXUS takes an active role in projects, as applicant, coordinator, or partner, bringing expertise and commitment to every collaboration.
+            sudeNEXUS takes an active role in projects across 28+ engagements — as applicant, coordinator, or partner — bringing expertise and commitment to every collaboration.
           </p>
         </div>
         <ProjectCards />
@@ -218,7 +261,7 @@ export default function Home() {
             <p style={{ fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#5c1a2e', fontWeight: 600, marginBottom: '1rem' }}>About sudeNEXUS</p>
             <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: '#243654', lineHeight: 1.2, marginBottom: '1.5rem' }}>Built for organisations that want to do more.</h2>
             <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.95rem', color: '#888780', fontWeight: 300, lineHeight: 1.9, marginBottom: '1.25rem' }}>
-              sudeNEXUS is a consultancy at the intersection of strategy, education, and project development. We work with institutions, NGOs, and forward-thinking organisations to unlock their potential.
+              sudeNEXUS is a consultancy at the intersection of strategy, education, and project development. We work with institutions, NGOs, and forward-thinking organisations to unlock their potential — across Europe, MENA, and Central Asia.
             </p>
             <p style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.95rem', color: '#888780', fontWeight: 300, lineHeight: 1.9 }}>
               Our approach is hands-on. We don&apos;t deliver reports — we deliver results.
@@ -226,10 +269,10 @@ export default function Home() {
           </div>
           <div className="four-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
             {[
-              { num: '3', label: 'Core service areas' },
-              { num: 'Global', label: 'Funding frameworks covered' },
+              { num: '28+', label: 'Projects delivered' },
+              { num: '26+', label: 'Countries in our network' },
               { num: '360°', label: 'Project lifecycle support' },
-              { num: 'Networked', label: 'Active partner network' },
+              { num: '10+', label: 'EU programmes we work with' },
             ].map(stat => (
               <div key={stat.num} style={{ background: '#f9f4f6', padding: '2rem', borderRadius: '4px', borderLeft: '3px solid #1d9e75' }}>
                 <div style={{ fontSize: '2rem', fontWeight: 700, color: '#1d9e75', lineHeight: 1, marginBottom: '0.4rem' }}>{stat.num}</div>
@@ -266,8 +309,10 @@ export default function Home() {
               <label style={{ display: 'block', fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#888780', fontWeight: 600, marginBottom: '0.4rem' }}>How can we help?</label>
               <select name="subject" style={{ width: '100%', padding: '0.7rem 0.9rem', border: '0.5px solid #d3d1c7', borderRadius: '2px', fontFamily: 'var(--font-raleway), Raleway, sans-serif', fontSize: '0.88rem', color: '#444441', background: 'white', outline: 'none' }}>
                 <option>Project Consulting</option>
+                <option>Funding & Grant Advisory</option>
                 <option>Training & Courses</option>
                 <option>Partnership Opportunity</option>
+                <option>DX by NEXUS</option>
                 <option>Other</option>
               </select>
             </div>
